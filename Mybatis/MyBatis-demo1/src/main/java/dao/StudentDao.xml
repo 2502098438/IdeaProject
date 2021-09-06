@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ namespace：必须有值，自定义的唯一字符串
+ 推荐使用：dao 接口的全限定名称
+-->
+<mapper namespace="dao.StudentDao">
+    
+    <sql id="select">
+        select * from student
+    </sql>
+    <!--<select>: 查询数据， 标签中必须是 select 语句
+    id: sql 语句的自定义名称，推荐使用 dao 接口中方法名称，
+    使用名称表示要执行的 sql 语句
+    resultType: 查询语句的返回结果数据类型，使用全限定类名-->
+    <select id="queryAllStu" resultType="entity.Student">
+        select * from student order by id
+    </select>
+
+    <insert id="insertStudent">
+        insert into student values(#{id},#{stuName},#{email})
+    </insert>
+
+    <select id="queryStuByNameOrId" resultType="entity.Student">
+        select * from student where stuName=#{stuName} or id=#{id}
+    </select>
+
+    <select id="queryStuByClass" resultType="entity.Student">
+    select * from student where stuName=#{stuName} or id=#{id}
+    </select>
+
+    <select id="queryEmployee" resultType="entity.Employee">
+        select * from student where id=#{id}
+    </select>
+
+    <select id="qureyMap" resultType="map">
+        select * from student where id=#{id}
+    </select>
+
+    <select id="queryAllStudent2" resultType="entity.Student2">
+        select * from student
+    </select>
+
+    <resultMap id="student2" type="entity.Student2">
+        <id column="id" property="StuId"></id>
+        <result column="stuName" property="StuName"></result>
+        <result column="email" property="StuEmail"></result>
+    </resultMap>
+
+
+    <select id="queryStudent2Success" resultMap="student2">
+        select * from student
+    </select>
+
+    <select id="queryStuByIf" resultType="entity.Student">
+        select * from student <where>
+<if test="stuName != null and stuName!=''">
+and stuname=#{stuName}
+</if>
+<if test="email != null and email!=''">
+    or email=#{email}
+</if>
+    </where>
+    </select>
+
+    <select id="queryForEach" resultType="entity.Student">
+        select * from student where id in
+<foreach collection="list" item="id" open="(" close=")" separator=",">
+    #{id}
+</foreach>
+    </select>
+
+    <select id="queryForEachObj" resultType="entity.Student">
+        <include refid="select"/> where id in
+<foreach collection="list" item="stuid" open="(" close=")" separator=",">
+    #{stuid.id}
+</foreach>
+    </select>
+</mapper>
