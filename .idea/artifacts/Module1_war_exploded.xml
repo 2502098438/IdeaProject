@@ -6,8 +6,13 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Module1" />
+          <element id="module-output" name="SSMProject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-dbcp-1.4" module-name="SSMProject" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="SSMProject/web/Web" />
     </root>
   </artifact>
 </component>

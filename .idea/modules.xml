@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IdeaProject.iml" filepath="$PROJECT_DIR$/IdeaProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Module1/Module1.iml" filepath="$PROJECT_DIR$/Module1/Module1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reactor/Reactor.iml" filepath="$PROJECT_DIR$/Reactor/Reactor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmpro/SSMProject.iml" filepath="$PROJECT_DIR$/ssmpro/SSMProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring5/Spring5.iml" filepath="$PROJECT_DIR$/Spring5/Spring5.iml" />
     </modules>
   </component>
 </project>
