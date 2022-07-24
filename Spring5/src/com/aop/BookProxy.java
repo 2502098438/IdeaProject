@@ -1,7 +1,7 @@
 package com.aop;
 
 public class BookProxy {
-    public void bookProxy(){
+    public void bookProxy() {
         System.out.println("bookProxy.....");
     }
 }

@@ -10,7 +10,7 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    public void userService(){
+    public void userService() {
         System.out.println("userService.......");
         userDao.userDao();
     }

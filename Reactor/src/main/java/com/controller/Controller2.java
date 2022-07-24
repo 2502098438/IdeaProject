@@ -18,19 +18,19 @@ public class Controller2 {
         this.service = service;
     }
 
-    public Mono<ServerResponse> getStuById(ServerRequest request){
-        int id = Integer.valueOf(request.pathVariable("stuId")) ;
+    public Mono<ServerResponse> getStuById(ServerRequest request) {
+        int id = Integer.valueOf(request.pathVariable("stuId"));
 
         Mono<Student> studentMono = this.service.queryStuById(id);
         return studentMono.flatMap(student -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(fromObject(student)));
     }
 
-    public Mono<ServerResponse> getAllStu(ServerRequest request){
+    public Mono<ServerResponse> getAllStu(ServerRequest request) {
         Flux<Student> studentFlux = this.service.queryAllStu();
-        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(studentFlux,Student.class);
+        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(studentFlux, Student.class);
     }
 
-    public Mono<ServerResponse> addStu(ServerRequest request){
+    public Mono<ServerResponse> addStu(ServerRequest request) {
         Mono<Student> studentMono = request.bodyToMono(Student.class);
         return ServerResponse.ok().build(this.service.addStu(studentMono));
     }

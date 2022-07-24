@@ -1,7 +1,7 @@
 package com.aop;
 
 public class Book {
-    public void book(){
+    public void book() {
         System.out.println("book.....");
     }
 }

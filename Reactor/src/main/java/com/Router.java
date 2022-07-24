@@ -29,18 +29,18 @@ public class Router {
         System.in.read();
     }
 
-    public RouterFunction<ServerResponse> routerFunction(){
+    public RouterFunction<ServerResponse> routerFunction() {
         StuService service = new StuServiceImpl();
         Controller2 controller2 = new Controller2(service);
 
         //设置路由
         return RouterFunctions.route(
-                GET("/student/{stuId}").and(accept(APPLICATION_JSON)),controller2::getStuById)
-                .andRoute(GET("/student").and(accept(APPLICATION_JSON)),controller2::getAllStu);
+                        GET("/student/{stuId}").and(accept(APPLICATION_JSON)), controller2::getStuById)
+                .andRoute(GET("/student").and(accept(APPLICATION_JSON)), controller2::getAllStu);
     }
 
     //创建服务器完成适配
-    public void creatReactor(){
+    public void creatReactor() {
         //路由和 handler 适配
         RouterFunction<ServerResponse> route = routerFunction();
         HttpHandler httpHandler = toHttpHandler(route);

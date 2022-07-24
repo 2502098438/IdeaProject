@@ -5,13 +5,12 @@
 <configuration>
 
 
-
     <properties resource="db.properties"></properties>
 
 
     <!--mybatis.xml 文件加入日志配置，可以在控制台输出执行的 sql 语句和参数-->
     <settings>
-        <setting name="logImpl" value="STDOUT_LOGGING" />
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
     <plugins>

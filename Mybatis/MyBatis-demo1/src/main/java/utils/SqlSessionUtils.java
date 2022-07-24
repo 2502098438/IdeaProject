@@ -21,9 +21,9 @@ public class SqlSessionUtils {
         }
     }
 
-    public static SqlSession getSqlSession(){
+    public static SqlSession getSqlSession() {
         SqlSession sqlSession = null;
-        if (sqlSessionFactory!=null){
+        if (sqlSessionFactory != null) {
             sqlSession = sqlSessionFactory.openSession();
         }
         return sqlSession;

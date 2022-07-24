@@ -5,7 +5,7 @@ import com.dao2.UserDao;
 public class UserDaoImpl implements UserDao {
     @Override
     public int add(int a, int b) {
-        return a+b;
+        return a + b;
     }
 
     @Override

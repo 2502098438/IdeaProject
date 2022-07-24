@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class PersonProxy {
 
-    @Before(value ="execution(* com.aop.User.add(..))")
-    public void before(){
+    @Before(value = "execution(* com.aop.User.add(..))")
+    public void before() {
         System.out.println("PersonProxy before....");
     }
 }

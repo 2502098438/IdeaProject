@@ -17,7 +17,7 @@ public class Test2 {
 
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
 
-        PageHelper.startPage(2,3);
+        PageHelper.startPage(2, 3);
         List<Student> students = sqlSession.selectList("dao.StudentDao.queryAllStu");
 
         for (Student student : students) {

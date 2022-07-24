@@ -12,148 +12,148 @@
 
     <!--<bean id="user" class="com.entity.User"></bean>-->
 
-<!--    <bean id="book" class="com.entity.Book">
-        <property name="bookId" value="1"></property>
-        <property name="bookName" value="学习"></property>
-        <property name="address">
-            <null></null>
-        </property>
-    </bean>-->
+    <!--    <bean id="book" class="com.entity.Book">
+            <property name="bookId" value="1"></property>
+            <property name="bookName" value="学习"></property>
+            <property name="address">
+                <null></null>
+            </property>
+        </bean>-->
 
-<!--    <bean id="book" class="com.entity.Book">
-        <property name="bookId" value="1"></property>
-        <property name="bookName" value="学习"></property>
-        <property name="address">
-            <value><![CDATA[<<南京>>]]></value>
-        </property>
-    </bean>-->
+    <!--    <bean id="book" class="com.entity.Book">
+            <property name="bookId" value="1"></property>
+            <property name="bookName" value="学习"></property>
+            <property name="address">
+                <value><![CDATA[<<南京>>]]></value>
+            </property>
+        </bean>-->
 
-<!--    <bean id="orders" class="com.entity.Orders">
-        <constructor-arg name="oId" value="2"></constructor-arg>
-        <constructor-arg name="oName" value="电脑"></constructor-arg>
-    </bean>-->
+    <!--    <bean id="orders" class="com.entity.Orders">
+            <constructor-arg name="oId" value="2"></constructor-arg>
+            <constructor-arg name="oName" value="电脑"></constructor-arg>
+        </bean>-->
 
-<!--    <bean id="book" class="com.entity.Book" p:bookId="2" p:bookName="游戏">
-    </bean>-->
-
-
-<!--    <bean id="userService" class="com.service.UserService">
-        <property name="userDao" ref="userDaoImpl"></property>
-    </bean>
-    <bean id="userDaoImpl" class="com.dao.impl.UserDaoImpl">
-    </bean>-->
+    <!--    <bean id="book" class="com.entity.Book" p:bookId="2" p:bookName="游戏">
+        </bean>-->
 
 
-<!--    <bean id="employ" class="com.bean.Employ">
-        <property name="eId" value="12"></property>
-        <property name="eName" value="lucy"></property>
-        <property name="department">
-            <bean id="department" class="com.bean.Department">
-                <property name="dName" value="安保部门"></property>
-            </bean>
-        </property>
-    </bean>-->
-
-<!--
-    <bean id="employ" class="com.bean.Employ">
-        <property name="eId" value="12"></property>
-        <property name="eName" value="lucy"></property>
-        <property name="department" ref="department"></property>
-        <property name="department.dName" value="财务部"></property>
-    </bean>
-    <bean id="department" class="com.bean.Department"></bean>
-
--->
-
-<!--
-    <bean id="stu" class="com.collectionType.Stu">
-        <property name="courses">
-            <array>
-                <value>java课程</value>
-                <value>jsp课程</value>
-            </array>
-        </property>
-        <property name="list">
-            <list>
-                <value>list1</value>
-                <value>list2</value>
-            </list>
-        </property>
-        <property name="map">
-            <map>
-                <entry key="map1" value="map1"></entry>
-                <entry key="map2" value="map2"></entry>
-            </map>
-        </property>
-        <property name="set">
-            <set>
-                <value>set1</value>
-                <value>set2</value>
-            </set>
-        </property>
-        <property name="coursesList">
-            <list>
-                <ref bean="course1"></ref>
-                <ref bean="course2"></ref>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="course1" class="com.collectionType.Courses">
-        <property name="cName" value="cName1"></property>
-    </bean>
-    <bean id="course2" class="com.collectionType.Courses">
-        <property name="cName" value="cName2"></property>
-    </bean>
-
-    <util:list id="bookLists">
-        <value>book1</value>
-        <value>book2</value>
-        <value>book3</value>
-    </util:list>
--->
-
-<!--    <bean id="book" class="com.collectionType.Book" scope="prototype">
-        <property name="bookList" ref="bookLists"></property>
-    </bean>-->
-
-<!--    <bean id="bean" class="com.factoryBean.Bean"></bean>
+    <!--    <bean id="userService" class="com.service.UserService">
+            <property name="userDao" ref="userDaoImpl"></property>
+        </bean>
+        <bean id="userDaoImpl" class="com.dao.impl.UserDaoImpl">
+        </bean>-->
 
 
-    <bean id="student" class="com.student.Student" init-method="student" destroy-method="destoryMethod">
-        <property name="stuName" value="张三"></property>
-    </bean>-->
+    <!--    <bean id="employ" class="com.bean.Employ">
+            <property name="eId" value="12"></property>
+            <property name="eName" value="lucy"></property>
+            <property name="department">
+                <bean id="department" class="com.bean.Department">
+                    <property name="dName" value="安保部门"></property>
+                </bean>
+            </property>
+        </bean>-->
+
+    <!--
+        <bean id="employ" class="com.bean.Employ">
+            <property name="eId" value="12"></property>
+            <property name="eName" value="lucy"></property>
+            <property name="department" ref="department"></property>
+            <property name="department.dName" value="财务部"></property>
+        </bean>
+        <bean id="department" class="com.bean.Department"></bean>
+
+    -->
+
+    <!--
+        <bean id="stu" class="com.collectionType.Stu">
+            <property name="courses">
+                <array>
+                    <value>java课程</value>
+                    <value>jsp课程</value>
+                </array>
+            </property>
+            <property name="list">
+                <list>
+                    <value>list1</value>
+                    <value>list2</value>
+                </list>
+            </property>
+            <property name="map">
+                <map>
+                    <entry key="map1" value="map1"></entry>
+                    <entry key="map2" value="map2"></entry>
+                </map>
+            </property>
+            <property name="set">
+                <set>
+                    <value>set1</value>
+                    <value>set2</value>
+                </set>
+            </property>
+            <property name="coursesList">
+                <list>
+                    <ref bean="course1"></ref>
+                    <ref bean="course2"></ref>
+                </list>
+            </property>
+        </bean>
+
+        <bean id="course1" class="com.collectionType.Courses">
+            <property name="cName" value="cName1"></property>
+        </bean>
+        <bean id="course2" class="com.collectionType.Courses">
+            <property name="cName" value="cName2"></property>
+        </bean>
+
+        <util:list id="bookLists">
+            <value>book1</value>
+            <value>book2</value>
+            <value>book3</value>
+        </util:list>
+    -->
+
+    <!--    <bean id="book" class="com.collectionType.Book" scope="prototype">
+            <property name="bookList" ref="bookLists"></property>
+        </bean>-->
+
+    <!--    <bean id="bean" class="com.factoryBean.Bean"></bean>
+
+
+        <bean id="student" class="com.student.Student" init-method="student" destroy-method="destoryMethod">
+            <property name="stuName" value="张三"></property>
+        </bean>-->
 
     <!--在调用bean的初始化方法之前和之后的后置处理器-->
-<!--    <bean id="BAA" class="com.student.BeforeAndAfter"></bean>-->
-<!--
+    <!--    <bean id="BAA" class="com.student.BeforeAndAfter"></bean>-->
+    <!--
 
-    <bean id="emp" class="com.autowire.Emp" autowire="byName"></bean>
-    <bean id="dept" class="com.autowire.Dept"></bean>
--->
+        <bean id="emp" class="com.autowire.Emp" autowire="byName"></bean>
+        <bean id="dept" class="com.autowire.Dept"></bean>
+    -->
 
 
-<!--    <context:property-placeholder location="jdbc.properties"></context:property-placeholder>
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driverClassName" value="${prop.driverClass}"></property>
-        <property name="url" value="${prop.url}"></property>
-        <property name="username" value="${prop.userName}"></property>
-        <property name="password" value="${prop.password}"></property>
-    </bean>
+    <!--    <context:property-placeholder location="jdbc.properties"></context:property-placeholder>
+        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+            <property name="driverClassName" value="${prop.driverClass}"></property>
+            <property name="url" value="${prop.url}"></property>
+            <property name="username" value="${prop.userName}"></property>
+            <property name="password" value="${prop.password}"></property>
+        </bean>
 
-    <context:component-scan base-package="com.service,com.dao,com.aop">
-    </context:component-scan>-->
+        <context:component-scan base-package="com.service,com.dao,com.aop">
+        </context:component-scan>-->
 
-<!--    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <!--    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
-    <bean id="book" class="com.aop.Book"></bean>
-    <bean id="bookProxy" class="com.aop.BookProxy"></bean>
-    <aop:config>
-        <aop:pointcut id="p" expression="execution(* com.aop.Book.book(..))"/>
-        <aop:aspect ref="bookProxy">
-            <aop:before method="bookProxy" pointcut-ref="p"></aop:before>
-        </aop:aspect>
-    </aop:config>-->
+        <bean id="book" class="com.aop.Book"></bean>
+        <bean id="bookProxy" class="com.aop.BookProxy"></bean>
+        <aop:config>
+            <aop:pointcut id="p" expression="execution(* com.aop.Book.book(..))"/>
+            <aop:aspect ref="bookProxy">
+                <aop:before method="bookProxy" pointcut-ref="p"></aop:before>
+            </aop:aspect>
+        </aop:config>-->
 
     <context:property-placeholder location="jdbc.properties"></context:property-placeholder>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
@@ -173,20 +173,19 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
-    
+
     <tx:advice id="transaction">
         <tx:attributes>
             <tx:method name="bank"/>
         </tx:attributes>
     </tx:advice>
-    
+
     <aop:config>
         <aop:pointcut id="pt" expression="execution(* transaction.service.Service.*(..))"/>
         <aop:advisor advice-ref="transaction" pointcut-ref="pt"></aop:advisor>
     </aop:config>
 
     <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
-
 
 
 </beans>

@@ -17,7 +17,7 @@ public class TestJunit4 {
 
 
     @Test
-    public void test(){
+    public void test() {
         service.bank();
     }
 }

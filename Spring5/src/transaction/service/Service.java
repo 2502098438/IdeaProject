@@ -8,16 +8,16 @@ import org.springframework.transaction.annotation.Transactional;
 import transaction.dao.Dao;
 
 @org.springframework.stereotype.Service
-@Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.REPEATABLE_READ)
+@Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
 public class Service {
 
     @Autowired
     private Dao dao;
 
-    public void bank(){
+    public void bank() {
         dao.reduceMoney();
 
-/*        int i=10/0;*/
+        /*        int i=10/0;*/
 
         dao.addMoney();
     }

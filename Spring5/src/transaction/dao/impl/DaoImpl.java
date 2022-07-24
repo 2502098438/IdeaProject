@@ -15,13 +15,14 @@ public class DaoImpl implements Dao {
 
     @Override
     public void reduceMoney() {
-        String sql="update bank set money=money-? where name=?";
-        jdbcTemplate.update(sql,"100","老大");
+        String sql = "update bank set money=money-? where name=?";
+        jdbcTemplate.update(sql, "100", "老大");
     }
+
     @Override
     public void addMoney() {
-        String sql="update bank set money=money+? where name=?";
-        jdbcTemplate.update(sql,"100","老二");
+        String sql = "update bank set money=money+? where name=?";
+        jdbcTemplate.update(sql, "100", "老二");
     }
 
 

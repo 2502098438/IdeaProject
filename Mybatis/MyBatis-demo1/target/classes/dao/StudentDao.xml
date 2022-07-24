@@ -7,7 +7,7 @@
  推荐使用：dao 接口的全限定名称
 -->
 <mapper namespace="dao.StudentDao">
-    
+
     <sql id="select">
         select * from student
     </sql>
@@ -28,7 +28,7 @@
     </select>
 
     <select id="queryStuByClass" resultType="entity.Student">
-    select * from student where stuName=#{stuName} or id=#{id}
+        select * from student where stuName=#{stuName} or id=#{id}
     </select>
 
     <select id="queryEmployee" resultType="entity.Employee">
@@ -55,27 +55,29 @@
     </select>
 
     <select id="queryStuByIf" resultType="entity.Student">
-        select * from student <where>
-<if test="stuName != null and stuName!=''">
-and stuname=#{stuName}
-</if>
-<if test="email != null and email!=''">
-    or email=#{email}
-</if>
-    </where>
+        select * from student
+        <where>
+            <if test="stuName != null and stuName!=''">
+                and stuname=#{stuName}
+            </if>
+            <if test="email != null and email!=''">
+                or email=#{email}
+            </if>
+        </where>
     </select>
 
     <select id="queryForEach" resultType="entity.Student">
         select * from student where id in
-<foreach collection="list" item="id" open="(" close=")" separator=",">
-    #{id}
-</foreach>
+        <foreach collection="list" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
     </select>
 
     <select id="queryForEachObj" resultType="entity.Student">
-        <include refid="select"/> where id in
-<foreach collection="list" item="stuid" open="(" close=")" separator=",">
-    #{stuid.id}
-</foreach>
+        <include refid="select"/>
+        where id in
+        <foreach collection="list" item="stuid" open="(" close=")" separator=",">
+            #{stuid.id}
+        </foreach>
     </select>
 </mapper>

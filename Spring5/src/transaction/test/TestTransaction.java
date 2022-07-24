@@ -9,17 +9,17 @@ public class TestTransaction {
         service.bank();
     }*/
 
-/*    public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
-        Service service = applicationContext.getBean("service", Service.class);
-        service.bank();
-    }*/
-      public static void main(String[] args) {
+    /*    public static void main(String[] args) {
+            ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
+            Service service = applicationContext.getBean("service", Service.class);
+            service.bank();
+        }*/
+    public static void main(String[] args) {
 
-          GenericApplicationContext context = new GenericApplicationContext();
-          context.refresh();
-          context.registerBean("user",User.class,()->new User());
-          Object user = context.getBean("user");
-          System.out.println(user);
-      }
+        GenericApplicationContext context = new GenericApplicationContext();
+        context.refresh();
+        context.registerBean("user", User.class, () -> new User());
+        Object user = context.getBean("user");
+        System.out.println(user);
+    }
 }

@@ -8,7 +8,7 @@ import java.util.Set;
 public class Stu {
     private String[] courses;
     private List<String> list;
-    private Map<String ,Object> map;
+    private Map<String, Object> map;
     private Set<String> set;
     private List<Courses> coursesList;
 
@@ -32,7 +32,7 @@ public class Stu {
         this.set = set;
     }
 
-    public void stu(){
+    public void stu() {
         System.out.println("Stu{" +
                 "courses=" + Arrays.toString(courses) +
                 ", list=" + list +

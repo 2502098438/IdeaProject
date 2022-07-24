@@ -19,21 +19,22 @@ public class JDKProxy {
     }
 }
 
-class UserDaoProxy implements InvocationHandler{
+class UserDaoProxy implements InvocationHandler {
 
     private Object object;
+
     public UserDaoProxy(Object o) {
-        this.object=o;
+        this.object = o;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-        System.out.println("方法执行之前"+method.getName()+"传递的参数"+ Arrays.toString(args));
+        System.out.println("方法执行之前" + method.getName() + "传递的参数" + Arrays.toString(args));
 
         Object invoke = method.invoke(object, args);
 
-        System.out.println("方法执行之后"+object);
+        System.out.println("方法执行之后" + object);
 
         return invoke;
     }

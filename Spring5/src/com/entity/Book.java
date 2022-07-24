@@ -17,8 +17,8 @@ public class Book {
         this.address = address;
     }
 
-    public void testBook(){
-        System.out.println("bookId="+bookId+",bookName="+bookName+",address="+address);
+    public void testBook() {
+        System.out.println("bookId=" + bookId + ",bookName=" + bookName + ",address=" + address);
     }
 
 }

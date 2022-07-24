@@ -9,7 +9,7 @@ public class Orders {
         this.oName = oName;
     }
 
-    public void testOrders(){
-        System.out.println("oId="+oId+",oName="+oName);
+    public void testOrders() {
+        System.out.println("oId=" + oId + ",oName=" + oName);
     }
 }

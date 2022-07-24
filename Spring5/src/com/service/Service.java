@@ -16,8 +16,8 @@ public class Service {
     @Value("abc")
     private String name;
 
-    public void service(){
+    public void service() {
         dao.add();
-        System.out.println("service......"+name);
+        System.out.println("service......" + name);
     }
 }

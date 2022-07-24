@@ -56,7 +56,7 @@ public class TestMyBatis {
         student.setId(1);
         student.setStuName("老二");
         List<Student> students = mapper.queryStuByClass(student);
-        for (Student student1 : students){
+        for (Student student1 : students) {
             System.out.println(student1);
         }
         sqlSession.commit();
@@ -65,7 +65,7 @@ public class TestMyBatis {
     }
 
     @Test
-    public void testEmployee(){
+    public void testEmployee() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
@@ -77,7 +77,7 @@ public class TestMyBatis {
     }
 
     @Test
-    public void testMap(){
+    public void testMap() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
@@ -89,14 +89,14 @@ public class TestMyBatis {
     }
 
     @Test
-    public void testStudent2(){
+    public void testStudent2() {
         /*此例子说明了从数据库中查资源跟大小写无关,跟属性名有关*/
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
         List<Student2> student2s = mapper.queryAllStudent2();
 
-        for (Student2 student2 :student2s){
+        for (Student2 student2 : student2s) {
             System.out.println(student2);
         }
 
@@ -106,12 +106,12 @@ public class TestMyBatis {
     }
 
     @Test
-    public void testStudent2Success(){
+    public void testStudent2Success() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
         List<Student2> student2s = mapper.queryStudent2Success();
-        for (Student2 student2:student2s){
+        for (Student2 student2 : student2s) {
             System.out.println(student2);
         }
         sqlSession.commit();
@@ -121,7 +121,7 @@ public class TestMyBatis {
 
 
     @Test
-    public void queryStuByIf(){
+    public void queryStuByIf() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
@@ -129,7 +129,7 @@ public class TestMyBatis {
         student.setStuName("老五");
         student.setEmail("2502098438@qq.com");
         List<Student> students = mapper.queryStuByIf(student);
-        for (Student student1 : students){
+        for (Student student1 : students) {
             System.out.println(student1);
         }
         sqlSession.commit();
@@ -138,7 +138,7 @@ public class TestMyBatis {
     }
 
     @Test
-    public void queryForEach(){
+    public void queryForEach() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
@@ -146,7 +146,7 @@ public class TestMyBatis {
         list.add(1);
         list.add(2);
         List<Student> students = mapper.queryForEach(list);
-        for (Student student:students){
+        for (Student student : students) {
             System.out.println(student);
         }
         sqlSession.commit();
@@ -155,7 +155,7 @@ public class TestMyBatis {
     }
 
     @Test
-    public void queryForEachObj(){
+    public void queryForEachObj() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
@@ -170,7 +170,7 @@ public class TestMyBatis {
 
 
         List<Student> students = mapper.queryForEachObj(list);
-        for (Student student3:students){
+        for (Student student3 : students) {
             System.out.println(student3);
         }
         sqlSession.commit();

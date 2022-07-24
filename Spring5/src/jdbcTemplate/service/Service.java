@@ -13,39 +13,39 @@ public class Service {
     @Autowired
     private DaoImpl dao;
 
-    public void add(Student student){
+    public void add(Student student) {
         dao.add(student);
     }
 
-    public void delete(String stuId){
+    public void delete(String stuId) {
         dao.delete(stuId);
     }
 
-    public void update(Student student){
+    public void update(Student student) {
         dao.update(student);
     }
 
-    public int query(){
+    public int query() {
         return dao.query();
     }
 
-    public Student queryStudent(String stuId){
+    public Student queryStudent(String stuId) {
         return dao.queryStudent(stuId);
     }
 
-    public List<Student> queryAllStudent(){
+    public List<Student> queryAllStudent() {
         return dao.queryAllStudent();
     }
 
-    public void batchAdd(List<Object[]> objects){
+    public void batchAdd(List<Object[]> objects) {
         dao.batchAdd(objects);
     }
 
-    public void batchDelete(List<Object[]> objects){
+    public void batchDelete(List<Object[]> objects) {
         dao.batchDelete(objects);
     }
 
-    public void batchUpdate(List<Object[]> objects){
+    public void batchUpdate(List<Object[]> objects) {
         dao.batchUpdate(objects);
     }
 }

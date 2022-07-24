@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TestStudent {
     @Test
-    public void testStudent(){
+    public void testStudent() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         Service service = applicationContext.getBean("service", Service.class);
 /*
@@ -21,7 +21,7 @@ public class TestStudent {
         service.add(student);
 */
 
-/*        service.delete("1");*/
+        /*        service.delete("1");*/
 
 
 /*        Student student = new Student();
@@ -51,8 +51,8 @@ public class TestStudent {
         service.batchDelete(objects);
 
         List<Object[]> objects2 = new ArrayList<>();
-        Object[] objects12 = {"王五","33","1"};
-        Object[] objects22 = {"小四","32","2"};
+        Object[] objects12 = {"王五", "33", "1"};
+        Object[] objects22 = {"小四", "32", "2"};
         objects2.add(objects12);
         objects2.add(objects22);
         service.batchUpdate(objects2);

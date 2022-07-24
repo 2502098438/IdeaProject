@@ -26,14 +26,14 @@ public class Config {
     }
 
     @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource);
         return jdbcTemplate;
     }
 
     @Bean
-    public DataSourceTransactionManager transactionManager(DataSource dataSource){
+    public DataSourceTransactionManager transactionManager(DataSource dataSource) {
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
         transactionManager.setDataSource(dataSource);
         return transactionManager;

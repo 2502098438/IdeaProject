@@ -13,11 +13,11 @@ public class Student {
         this.stuName = stuName;
     }
 
-    public void student(){
+    public void student() {
         System.out.println("第三步,调用bean的初始化方法");
     }
 
-    public void destoryMethod(){
+    public void destoryMethod() {
         System.out.println("第五步,执行销毁方法");
     }
 }
